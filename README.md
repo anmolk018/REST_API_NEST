@@ -22,7 +22,8 @@ Install project with npm
 
 ### BACKEND
 ```bash
-  ** convert templateEnv.txt to .env (config file) and update database credentials
+  ** convert templateEnv to .env (environment file name change) and update database credentials
+  ** A database should exist for the name.
   npm install 
   npm run start
     -project running at PORT 3000
