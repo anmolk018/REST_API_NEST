@@ -1,0 +1,22 @@
+
+<div class="container">
+  <h1>Dashboard</h1>
+  <p>Welcome to your dashboard!</p>
+  <div *ngIf="isLoading" class="loading">
+    Loading users...
+  </div>
+  
+  <div *ngIf="!isLoading && users.length === 0" class="no-data">
+    Data Not Found
+  </div>
+
+  <div *ngIf="!isLoading && users.length > 0" class="user-list">
+    <div *ngFor="let user of users" class="user-card">
+      <h3>{{ user.name }}</h3>
+      <p>Organization: {{ user.organization || 'N/A' }}</p>
+    </div>
+  </div>
+
+  <button (click)="logout()">Logout</button>
+</div>
+  
